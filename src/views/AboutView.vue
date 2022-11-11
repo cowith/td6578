@@ -1,3 +1,7 @@
+<script type="module" setup>
+// import { ViteAlert } from 'http://127.0.0.1:3001/my-lib.es.js';
+</script>
+
 <template>
   <div class="about">
     <ViteAlert email="google.com"></ViteAlert>
@@ -6,7 +10,7 @@
 </template>
 
 <script type="module">
-// import { ViteAlert } from 'http://127.0.0.1:8082/my-lib.es.js';
+// import { ViteAlert } from 'http://127.0.0.1:3001/my-lib.es.js';
 import ViteAlert from '../packages/alert/index.vue';
 export default {
   components: {
