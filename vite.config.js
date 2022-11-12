@@ -13,7 +13,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // ====================for isCE error====================
+      vue: resolve(__dirname, './node_modules/vue'),
     },
+    dedupe: ['vue'],
+    // ====================for isCE error====================
   },
   build: {
     outDir: 'lib',
@@ -25,6 +29,16 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['vue'],
+
+      // ====================for isCE error====================
+      resolve: {
+        alias: {
+          vue: resolve(__dirname, './node_modules/vue'),
+        },
+        dedupe: ['vue'],
+      },
+      // ====================for isCE error====================
+
       output: {
         globals: {
           vue: 'Vue',

@@ -4,14 +4,13 @@
 
 <template>
   <div class="about">
-    <ViteAlert email="google.com"></ViteAlert>
-    <h1 class="red">This is an about page</h1>
+    <ViteAlert email="example@example.com"></ViteAlert>
   </div>
 </template>
 
 <script type="module">
-// import { ViteAlert } from 'http://127.0.0.1:3001/my-lib.es.js';
-import ViteAlert from '../packages/alert/index.vue';
+import { ViteAlert } from 'http://127.0.0.1:3001/my-lib.es.js';
+// import ViteAlert from '../packages/alert/index.vue';
 export default {
   components: {
     ViteAlert,

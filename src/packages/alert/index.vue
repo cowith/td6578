@@ -1,6 +1,8 @@
 <template>
   <div class="vite-alert">
     <div class="vite-alert__content">
+      <!-- using slot -->
+      <slot></slot>
       <h1 class="red">{{ message }} - {{ email }}</h1>
     </div>
   </div>
