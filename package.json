@@ -4,16 +4,30 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:comp": "vite build --config ./vite.config.comp.js",
     "preview": "vite preview",
-    "deploy": "vite build && http-server ./lib --cors --port 3001"
+    "deploy": "http-server ./libs --cors --port 3001",
+    "build:alert": "LIB_NAME=alert LIB_VERSION=1.1 vite build --config ./vite.config.comp.js",
+    "build:math": "LIB_NAME=math LIB_VERSION=1.0 vite build --config ./vite.config.comp.js",
+    "build:web": "npm run build:math && npm run build:alert"
   },
   "dependencies": {
     "http-server": "^14.1.1",
+    "pinia": "^2.0.23",
+    "vue": "3.2.41",
+    "vue-demi": "^0.13.11",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.2",
     "@vitejs/plugin-vue": "^3.1.2",
+    "koa": "^2.13.4",
+    "koa2-connect-history-api-fallback": "^0.1.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-external-globals": "^0.6.1",
     "vite": "^3.1.8",
-    "vue": "3.2.41"
+    "vite-plugin-cdn-import": "^0.3.5",
+    "vite-plugin-html": "^3.2.0"
   }
 }

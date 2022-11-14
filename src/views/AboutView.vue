@@ -1,5 +1,5 @@
 <script type="module" setup>
-// import { ViteAlert } from 'http://127.0.0.1:3001/my-lib.es.js';
+import { ViteAlert } from 'http://127.0.0.1:3001/alert@1.1.es.js';
 </script>
 
 <template>
@@ -8,17 +8,8 @@
   </div>
 </template>
 
-<script type="module">
-import { ViteAlert } from 'http://127.0.0.1:3001/my-lib.es.js';
-// import ViteAlert from '../packages/alert/index.vue';
-export default {
-  components: {
-    ViteAlert,
-  },
-};
-</script>
-
 <style scoped>
+@import url('http://127.0.0.1:3001/alert@1.1.css');
 .red {
   color: red;
 }
